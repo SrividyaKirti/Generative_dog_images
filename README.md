@@ -20,7 +20,7 @@ The discriminator's training data comes from two sources:
 Real data instances, such as real pictures of people. The discriminator uses these instances as positive examples during training.
 Fake data instances created by the generator. The discriminator uses these instances as negative examples during training.
 
-During discriminator training:
+Discriminator training:
 
 * The discriminator classifies both real data and fake data from the generator.
 * The discriminator loss penalizes the discriminator for misclassifying a real instance as fake or a fake instance as real.
@@ -30,14 +30,14 @@ During discriminator training:
 
 The generator part of a GAN learns to create fake data by incorporating feedback from the discriminator. It learns to make the discriminator classify its output as real.
 
-The portion of the GAN that trains the generator includes:
+Generator Training:
 
-* random input
-* generator network, which transforms the random input into a data instance
-* discriminator network, which classifies the generated data
-* discriminator output
-* generator loss, which penalizes the generator for failing to fool the discriminator
-
+* Sample random noise.
+* Produce generator output from sampled random noise.
+* Get discriminator "Real" or "Fake" classification for generator output.
+* Calculate loss from discriminator classification.
+* Backpropagate through both the discriminator and generator to obtain gradients.
+* Use gradients to change only the generator weights.
 
 ### Some examples
 

@@ -9,6 +9,8 @@ It has 2 components:
 
 When training begins, the generator produces fake data and the discriminator can easily identify it as fake. As training progresses, the generator learns to fool the discriminator into classifying real images as fake by generating more realistic images.
 
+### How does it work?
+
 #### The Discriminator
 
 The discriminator in a GAN is a classifier. It tries to distinguish real data from the fake data created by the generator. It could use any architecture appropriate to the type of data it's classifying.
@@ -36,7 +38,6 @@ The portion of the GAN that trains the generator includes:
 * discriminator output
 * generator loss, which penalizes the generator for failing to fool the discriminator
 
-### How does it work?
 
 ### Some examples
 

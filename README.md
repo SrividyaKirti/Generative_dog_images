@@ -50,6 +50,10 @@ Here are some generated dog images
 
 <img width="526" alt="Screen Shot 2022-06-29 at 5 39 08 PM" src="https://user-images.githubusercontent.com/29855231/176568572-45729e3a-5976-4d1b-bb7b-33ae8ed8d2b6.png">
 
+### Outcomes of the project
+
+We were able to build a working pipeline to train GANs and learn about GAN architectures.
+
 References : 
 * https://www.researchgate.net/figure/Network-architecture-generator-top-discriminator-bottom-The-GAN-is-composed-by_fig1_335341342
 * https://developers.google.com/machine-learning/gan/generator

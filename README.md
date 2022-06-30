@@ -23,7 +23,7 @@ The training steps are as follows:
 
 #### The Generator
 
-The generator is a model that takes feedback from the Discriminator and tries to impore the generated image in a way such that the Discriminator is not able to distinguish between the actual or fake image. That is, in the next pass it classifies the fake image as real.
+The generator is a model that takes feedback from the Discriminator and tries to improve the generated image in a way such that the Discriminator is not able to distinguish between the actual or fake image. That is, in the next pass it classifies the fake image as real.
 
 The training steps are follow:
 
@@ -38,5 +38,11 @@ The training steps are follow:
 
 <img width="687" alt="Screen Shot 2022-06-29 at 5 30 55 PM" src="https://user-images.githubusercontent.com/29855231/176567883-d7920095-fc77-4b11-9253-d07d468d0a44.png">
 
+* The discriminator is a CNN based architecture that is process the incoming images through various levels of convolution opertions and Linear layer to predict as positive or negative class.
+* The generator takes in a noise sampled vector, reshapes and upsamples it into a 3D matrix and applies  a non linear function to produce a generated image.
+
+Source : https://www.researchgate.net/figure/Network-architecture-generator-top-discriminator-bottom-The-GAN-is-composed-by_fig1_335341342
+
 ### Some examples
+
 

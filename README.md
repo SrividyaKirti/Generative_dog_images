@@ -41,8 +41,11 @@ The training steps are follow:
 * The discriminator is a CNN based architecture that is process the incoming images through various levels of convolution opertions and Linear layer to predict as positive or negative class.
 * The generator takes in a noise sampled vector, reshapes and upsamples it into a 3D matrix and applies  a non linear function to produce a generated image.
 
-Source : https://www.researchgate.net/figure/Network-architecture-generator-top-discriminator-bottom-The-GAN-is-composed-by_fig1_335341342
-
 ### Some examples
 
+Here are some generated dog images
+<img width="526" alt="Screen Shot 2022-06-29 at 5 39 08 PM" src="https://user-images.githubusercontent.com/29855231/176568572-45729e3a-5976-4d1b-bb7b-33ae8ed8d2b6.png">
 
+References : 
+* https://www.researchgate.net/figure/Network-architecture-generator-top-discriminator-bottom-The-GAN-is-composed-by_fig1_335341342
+* https://developers.google.com/machine-learning/gan/generator

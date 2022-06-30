@@ -13,24 +13,19 @@ When training begins, the generator produces fake data and the discriminator can
 
 #### The Discriminator
 
-The discriminator in a GAN is a classifier. It tries to distinguish real data from the fake data created by the generator. It could use any architecture appropriate to the type of data it's classifying.
+The Discriminator is a model that is aimed at identifying whether an image is an actual or a fake. This model functions like a classfier. Therefore, the model architecture is a deep neural network that classfies images from the the generator.
 
-The discriminator's training data comes from two sources:
-
-Real data instances, such as real pictures of people. The discriminator uses these instances as positive examples during training.
-Fake data instances created by the generator. The discriminator uses these instances as negative examples during training.
-
-Discriminator training:
-
+The training steps are as follows:
+* The data source is real data instances that are treated as positive classes and fake data instances are treated as negative classes.
 * The discriminator classifies both real data and fake data from the generator.
-* The discriminator loss penalizes the discriminator for misclassifying a real instance as fake or a fake instance as real.
+* The loss penalizes the discriminator for misclassifying a real instance as fake or a fake instance as real.
 * The discriminator updates its weights through backpropagation from the discriminator loss through the discriminator network.
 
 #### The Generator
 
-The generator part of a GAN learns to create fake data by incorporating feedback from the discriminator. It learns to make the discriminator classify its output as real.
+The generator is a model that takes feedback from the Discriminator and tries to impore the generated image in a way such that the Discriminator is not able to distinguish between the actual or fake image. That is, in the next pass it classifies the fake image as real.
 
-Generator Training:
+The training steps are follow:
 
 * Sample random noise.
 * Produce generator output from sampled random noise.
@@ -38,6 +33,10 @@ Generator Training:
 * Calculate loss from discriminator classification.
 * Backpropagate through both the discriminator and generator to obtain gradients.
 * Use gradients to change only the generator weights.
+
+### Architecture
+
+<img width="687" alt="Screen Shot 2022-06-29 at 5 30 55 PM" src="https://user-images.githubusercontent.com/29855231/176567883-d7920095-fc77-4b11-9253-d07d468d0a44.png">
 
 ### Some examples
 
